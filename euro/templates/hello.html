@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Euroarch</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="/static/css/euro.css" rel='stylesheet' type='text/css'/>
+<link href="/static/css/bootstrap.css" rel='stylesheet' type='text/css'/>
+<link href="/static/css/ionicons.css" rel='stylesheet' type='text/css'/>
+
+</head>
+<style>
+.products{background-color:#f3f3f3;width:50%;margin:30px;padding:30px;}
+</style>
+<body>
+<h1>products</h1>
+<hr/>
+{% for product in products %}
+<div class="products">
+<h2>{{product.name}}</h2>
+<h3>{{product.specs}}</h3>
+<h3>STOCK AVAILABLE: {{product.stocks}}</h3>
+<p>UPDATED ON {{product.pub_date}}</p>
+</div>
+<hr/>
+{% endfor %}
+
+</body>
+</html>

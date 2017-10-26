@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Euroarch</title>
+
+<link href="/static/css/euro.css" rel='stylesheet' type='text/css'/>
+<link href="/static/css/bootstrap.css" rel='stylesheet' type='text/css'/>
+<link href="/static/css/ionicons.css" rel='stylesheet' type='text/css'/>
+
+</head>
+<body>
+<div class="strip">
+<div class="container">
+<i class="ion-ios7-telephone-outline" style="font-size:25px;color:#cdcdcd;"></i>&nbsp&nbsp&nbsp+91484 4035173&nbsp&nbsp&nbsp
+<i class="ion-ios7-email-outline" style="font-size:25px;color:#cdcdcd;"></i>&nbsp&nbsp&nbspinfo@euroarch.com
+<a href="http://www.euroarchindia.com/admin/" target="_blank"><span>
+<i class="ion-ios7-person-outline" style="font-size:25px;color:#cdcdcd;"></i>LOGIN</span></a>
+
+</div>
+</div>
+<div class="logostrip">
+<div class="container">
+<div class="logo"><img src="/static/images/eurologo.png">EURO-ARCH</div>
+<ul class="navi">
+<li><a href="/euro.html">HOME</a></li>
+<li><a href="/about.html">ABOUT</a></li>
+<li><a href="/product.html">PRODUCTS</a></li>
+<li><a href="/contact.html">CONTACT</a></li>
+</ul>
+</div>
+</div>
+<div class="matter">
+<div class="pbody">
+<div class="container">
+<div class="col-md-12">
+
+{% for product in products %}
+<div class="product">
+<div class="pimage">
+<img src='{{MEDIA_URL}}{{product.image1}}'>
+</div>
+<h2>{{product.name}}</h2>
+<h4>{{product.specs}}</h4>
+<div class="sa">
+<h4>STOCK AVAILABLE:<span> {{product.stocks}} </span></h4></div>
+<p>UPDATED ON {{product.pub_date}}</p>
+</div>
+
+{% endfor %}
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+<div class="footer">
+<div class="container">
+
+<div class="col-md-4">
+
+<div class="flogo"><img src="/static/images/eurof.png">EURO-ARCH</div>
+<p>Euro-Arch Systems & Solutions Private Limited is the all kerela distributors of wide range of products from renowned international companies.</p>
+</div>
+<div class="col-md-4">
+<h4>CONTACT US</h4>
+<i class="ion-android-location" style="font-size:20px;"></i>&nbsp&nbsp&nbspPlackattu Colony,Cochin-17,<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspKerela,India-682017.<br>
+<i class="ion-ios7-telephone" style="font-size:25px;"></i>&nbsp&nbsp&nbsp+91484 4035173<br>
+<i class="ion-email" style="font-size:25px;"></i>&nbsp&nbsp&nbspinfo@euroarch.com
+</div>
+<div class="col-md-4">
+<h4>QUICK LINKS</h4>
+<ul class="flinks">
+<li><a href="/euro.html">HOME</a></li>
+<li><a href="/about.html">ABOUT</a></li>
+<li><a href="/product.html">PRODUCTS</a></li>
+<li><a href="/contact.html">CONTACT</a></li>
+</ul>
+</div>
+</div>
+<div class="container">
+<span>All rights reserved.Euro-arch 2014./Designed&Developed by <a href="http://www.webaccede.com/"> WEBACCEDE</a></span>
+
+</div>
+</div>
+
+</body>
+</html>
